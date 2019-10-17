@@ -1,0 +1,19 @@
+.bg-main{
+    height: 100vh;
+    background: url(/images/bg_1.jpg) no-repeat;
+    background-size: cover;
+    z-index: -1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg-main form{
+    border-color: #555555;
+    border-radius: 5px;
+}
+
+.bg-main form input::placeholder{
+    font-size: 13px;
+}
+
