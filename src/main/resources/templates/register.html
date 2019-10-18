@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-md-6 offset-md-3 mt-5">
             <form th:action="@{/users/register}" th:object="${user}" style="background: rgba(0,0,0,0.55)"
-                  class="ftco-animate fadeInUp ftco-animated border p-4" >
+                  class="ftco-animate fadeInUp ftco-animated border p-4" method="post">
                 <h3 class="border-bottom pb-2 text-white">Đăng ký</h3>
                 <div class="form-group mt-1">
                     <label class="text-white">Tài khoản: </label>
