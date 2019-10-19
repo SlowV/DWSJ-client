@@ -292,7 +292,7 @@ public class Rating  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(Rating.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "rating"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("createdAt");
         elemField.setXmlName(new javax.xml.namespace.QName("", "createdAt"));
@@ -314,14 +314,14 @@ public class Rating  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("image");
         elemField.setXmlName(new javax.xml.namespace.QName("", "image"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "image"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("place");
         elemField.setXmlName(new javax.xml.namespace.QName("", "place"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "place"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "place"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
@@ -346,7 +346,7 @@ public class Rating  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("user");
         elemField.setXmlName(new javax.xml.namespace.QName("", "user"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

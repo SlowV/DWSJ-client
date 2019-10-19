@@ -7,12 +7,10 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import t1708e.assignment.dwsjclient.service.user.User;
 import t1708e.assignment.dwsjclient.service.user.UserService;
 import t1708e.assignment.dwsjclient.util.StringConst;
@@ -58,22 +56,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/users/register").permitAll()
-                .antMatchers("/admin/**").hasAnyRole(StringConst.ROLE_ADMIN)
-                .and()
-                .formLogin()
-                .loginPage("/users/login")
-                .permitAll()
-                .and()
-                .logout()
-                .logoutUrl("/users/logout")
-                .logoutSuccessUrl("/")
-                .permitAll();
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/users/register").permitAll()
+//                .antMatchers("/admin/**").hasAnyRole(StringConst.ROLE_ADMIN)
+//                .and()
+//                .formLogin()
+//                .loginPage("/users/login")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .logoutUrl("/users/logout")
+//                .logoutSuccessUrl("/")
+//                .permitAll();
+//
 
-
-//        // trien khai chuc nang cho nhanh!
-//        http.authorizeRequests().anyRequest().permitAll();
+        // trien khai chuc nang cho nhanh!
+        http.authorizeRequests().anyRequest().permitAll();
     }
 }

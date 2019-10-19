@@ -25,10 +25,10 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("register");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"), t1708e.assignment.dwsjclient.service.user.User.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"), t1708e.assignment.dwsjclient.service.user.User.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"));
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"));
         oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
@@ -36,30 +36,33 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
         _operations[0] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("deleteUser");
-        oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        oper.setReturnClass(boolean.class);
+        oper.setName("login");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"), t1708e.assignment.dwsjclient.service.user.User.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"));
+        oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[1] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("getListUser");
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"));
-        oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User[].class);
+        oper.setName("updateUser");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"), t1708e.assignment.dwsjclient.service.user.User.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"));
+        oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[2] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("updateUser");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"), t1708e.assignment.dwsjclient.service.user.User.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"));
-        oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User.class);
+        oper.setName("deleteUser");
+        oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
+        oper.setReturnClass(boolean.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -70,7 +73,7 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"));
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"));
         oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
@@ -78,12 +81,9 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
         _operations[4] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("login");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"), t1708e.assignment.dwsjclient.service.user.User.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "user"));
-        oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User.class);
+        oper.setName("getListUser");
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"));
+        oper.setReturnClass(t1708e.assignment.dwsjclient.service.user.User[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -120,35 +120,35 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "comment");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "comment");
             cachedSerQNames.add(qName);
             cls = t1708e.assignment.dwsjclient.service.user.Comment.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "image");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image");
             cachedSerQNames.add(qName);
             cls = t1708e.assignment.dwsjclient.service.user.Image.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "place");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "place");
             cachedSerQNames.add(qName);
             cls = t1708e.assignment.dwsjclient.service.user.Place.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "rating");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating");
             cachedSerQNames.add(qName);
             cls = t1708e.assignment.dwsjclient.service.user.Rating.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "user");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user");
             cachedSerQNames.add(qName);
             cls = t1708e.assignment.dwsjclient.service.user.User.class;
             cachedSerClasses.add(cls);
@@ -233,143 +233,7 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "register"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (t1708e.assignment.dwsjclient.service.user.User) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (t1708e.assignment.dwsjclient.service.user.User) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.user.User.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public boolean deleteUser() throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[1]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "deleteUser"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return ((java.lang.Boolean) _resp).booleanValue();
-            } catch (java.lang.Exception _exception) {
-                return ((java.lang.Boolean) org.apache.axis.utils.JavaUtils.convert(_resp, boolean.class)).booleanValue();
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public t1708e.assignment.dwsjclient.service.user.User[] getListUser() throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[2]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "getListUser"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (t1708e.assignment.dwsjclient.service.user.User[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (t1708e.assignment.dwsjclient.service.user.User[]) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.user.User[].class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public t1708e.assignment.dwsjclient.service.user.User updateUser(t1708e.assignment.dwsjclient.service.user.User arg0) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[3]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "updateUser"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (t1708e.assignment.dwsjclient.service.user.User) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (t1708e.assignment.dwsjclient.service.user.User) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.user.User.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public t1708e.assignment.dwsjclient.service.user.User findByUsername(java.lang.String arg0) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[4]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "findByUsername"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "register"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -396,14 +260,14 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[5]);
+        _call.setOperation(_operations[1]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "login"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "login"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -418,6 +282,142 @@ public class UserServicePortBindingStub extends org.apache.axis.client.Stub impl
                 return (t1708e.assignment.dwsjclient.service.user.User) _resp;
             } catch (java.lang.Exception _exception) {
                 return (t1708e.assignment.dwsjclient.service.user.User) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.user.User.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public t1708e.assignment.dwsjclient.service.user.User updateUser(t1708e.assignment.dwsjclient.service.user.User arg0) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[2]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "updateUser"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (t1708e.assignment.dwsjclient.service.user.User) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (t1708e.assignment.dwsjclient.service.user.User) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.user.User.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public boolean deleteUser() throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[3]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "deleteUser"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return ((java.lang.Boolean) _resp).booleanValue();
+            } catch (java.lang.Exception _exception) {
+                return ((java.lang.Boolean) org.apache.axis.utils.JavaUtils.convert(_resp, boolean.class)).booleanValue();
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public t1708e.assignment.dwsjclient.service.user.User findByUsername(java.lang.String arg0) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[4]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "findByUsername"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (t1708e.assignment.dwsjclient.service.user.User) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (t1708e.assignment.dwsjclient.service.user.User) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.user.User.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public t1708e.assignment.dwsjclient.service.user.User[] getListUser() throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[5]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "getListUser"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (t1708e.assignment.dwsjclient.service.user.User[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (t1708e.assignment.dwsjclient.service.user.User[]) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.user.User[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
