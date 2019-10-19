@@ -23,5 +23,8 @@ public class AdminController {
     public String manageImage() {return "admin-image-manage";}
 
     @RequestMapping(value = "/comment/manage", method = RequestMethod.GET)
-    public String commentImage() {return "admin-comment-manage";}
+    public String manageComment() {return "admin-comment-manage";}
+
+    @RequestMapping(value = "/rating/manage", method = RequestMethod.GET)
+    public String manageRating() {return "admin-rating-manage";}
 }
