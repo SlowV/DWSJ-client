@@ -2,14 +2,15 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Travel Admin</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>
-    <meta name="msapplication-tap-highlight" content="no">
-    <link href="../../static/admin/main.css" th:href="@{/admin/main.css}" rel="stylesheet">
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta http-equiv="Content-Language" content="en">-->
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>-->
+<!--    <meta name="msapplication-tap-highlight" content="no">-->
+<!--    <link href="../../static/admin/main.css" th:href="@{/admin/main.css}" rel="stylesheet">-->
+    <th:block th:include="fragment/admin :: head"></th:block>
 </head>
 <body>
 <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -55,26 +56,6 @@
                     </div>
                     <button class="close"></button>
                 </div>
-                <ul class="header-menu nav">
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            <i class="nav-link-icon fa fa-database"> </i>
-                            Statistics
-                        </a>
-                    </li>
-                    <li class="btn-group nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            <i class="nav-link-icon fa fa-edit"></i>
-                            Projects
-                        </a>
-                    </li>
-                    <li class="dropdown nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            <i class="nav-link-icon fa fa-cog"></i>
-                            Settings
-                        </a>
-                    </li>
-                </ul>
             </div>
             <div class="app-header-right">
                 <div class="header-btn-lg pr-0">
@@ -85,7 +66,7 @@
                                     <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                        class="p-0 btn">
                                         <img width="42" class="rounded-circle"
-                                             th:src="@{/admin/assets/images/avatars/1.jpg}" alt="">
+                                             th:src="@{/static/admin/assets/images/avatars/1.jpg}" alt="">
                                         <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                     </a>
                                     <div tabindex="-1" role="menu" aria-hidden="true"
@@ -157,12 +138,12 @@
                     <ul class="vertical-nav-menu">
                         <li class="app-sidebar__heading">Dashboards</li>
                         <li>
-                            <a href="index.html" class="mm-active">
-                                <i class="metismenu-icon pe-7s-rocket"></i>
-                                Dashboard Example 1
+                            <a href="admin_index.html" class="mm-active">
+                                <i class="metismenu-icon pe-7s-home"></i>
+                                Dashboard
                             </a>
                         </li>
-                        <li class="app-sidebar__heading">UI Components</li>
+                        <li class="app-sidebar__heading">Quan ly</li>
                         <li>
                             <a href="#">
                                 <i class="metismenu-icon pe-7s-diamond"></i>
@@ -1038,8 +1019,5 @@
         </div>
     </div>
 </div>
-<!--<th:block th:include="fragment/layout :: script"></th:block>-->
-<script th:media="all" media="all" src="../../static/admin/assets/scripts/main.js"
-        th:src="@{/admin/assets/scripts/main.js}"></script>
-</body>
+<th:block th:include="fragment/admin :: script"> </th:block>
 </html>
