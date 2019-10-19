@@ -15,4 +15,10 @@ public class AdminController {
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String user() {return "admin_user";}
+
+    @RequestMapping(value = "/place/manage", method = RequestMethod.GET)
+    public String managePlace() {return "admin-place-manage";}
+
+    @RequestMapping(value = "/image/manage", method = RequestMethod.GET)
+    public String manageImage() {return "admin-image-manage";}
 }
