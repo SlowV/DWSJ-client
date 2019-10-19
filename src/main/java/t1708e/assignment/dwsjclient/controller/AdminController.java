@@ -12,4 +12,7 @@ public class AdminController {
     public String index() {
         return "admin_index";
     }
+
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public String user() {return "admin_user";}
 }
