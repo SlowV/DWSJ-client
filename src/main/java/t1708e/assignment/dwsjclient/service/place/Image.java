@@ -358,11 +358,11 @@ public class Image  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(Image.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "image"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("comments");
         elemField.setXmlName(new javax.xml.namespace.QName("", "comments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "comment"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "comment"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         elemField.setMaxOccursUnbounded(true);
@@ -395,14 +395,14 @@ public class Image  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("place");
         elemField.setXmlName(new javax.xml.namespace.QName("", "place"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "place"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "place"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("ratings");
         elemField.setXmlName(new javax.xml.namespace.QName("", "ratings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "rating"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         elemField.setMaxOccursUnbounded(true);

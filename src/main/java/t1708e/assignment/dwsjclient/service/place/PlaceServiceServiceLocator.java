@@ -105,7 +105,7 @@ public class PlaceServiceServiceLocator extends org.apache.axis.client.Service i
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://service.travel.t1708e/", "PlaceServiceService");
+        return new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "PlaceServiceService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class PlaceServiceServiceLocator extends org.apache.axis.client.Service i
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://service.travel.t1708e/", "PlaceServicePort"));
+            ports.add(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "PlaceServicePort"));
         }
         return ports.iterator();
     }
