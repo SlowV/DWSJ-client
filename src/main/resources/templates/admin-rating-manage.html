@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Travel Admin</title>
-<!--    <meta charset="utf-8">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-<!--    <meta http-equiv="Content-Language" content="en">-->
-<!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
-<!--    <meta name="viewport"-->
-<!--          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>-->
-<!--    <meta name="msapplication-tap-highlight" content="no">-->
-<!--    <link href="../../static/admin/main.css" th:href="@{/admin/main.css}" rel="stylesheet">-->
+    <!--    <meta charset="utf-8">-->
+    <!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--    <meta http-equiv="Content-Language" content="en">-->
+    <!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+    <!--    <meta name="viewport"-->
+    <!--          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>-->
+    <!--    <meta name="msapplication-tap-highlight" content="no">-->
+    <!--    <link href="../../static/admin/main.css" th:href="@{/admin/main.css}" rel="stylesheet">-->
     <th:block th:include="fragment/admin :: head"></th:block>
 </head>
 <body>
@@ -152,7 +152,7 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="/admin/user">
+                                    <a href="elements-dropdowns.html">
                                         <i class="metismenu-icon">
                                         </i>Manage
                                     </a>
@@ -248,10 +248,71 @@
             </div>
         </div>
         <div class="app-main__outer">
-            <div th:include="fragment/admin :: footer"></div>
+            <div class="app-page-title">
+                <div class="page-title-wrapper">
+                    <div class="page-title-heading">
+                        <div class="page-title-icon">
+                            <i class="pe-7s-drawer icon-gradient bg-happy-itmeo">
+                            </i>
+                        </div>
+                        <div>Rating
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="main-card mb-3 card">
+                        <div class="card-body"><h5 class="card-title">Simple table</h5>
+                            <table class="mb-0 table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                    <th>Options</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>
+                                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Update</button>
+                                        <button class="btn btn-danger">Delete</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<th:block th:include="fragment/admin :: script"> </th:block>
+<th:block th:include="fragment/admin :: script"></th:block>
 </body>
 </html>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="">
+                    <div class="position-relative form-group"><label for="exampleEmail" class="">Email</label><input name="email" id="exampleEmail" placeholder="with a placeholder" type="email" class="form-control"></div>
+                    <button class="mt-1 btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
