@@ -1,22 +1,34 @@
 package t1708e.assignment.dwsjclient.controller;
 
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import t1708e.assignment.dwsjclient.dto.PlaceDTO;
 import t1708e.assignment.dwsjclient.service.place.Image;
 import t1708e.assignment.dwsjclient.service.place.Place;
 import t1708e.assignment.dwsjclient.service.place.PlaceService;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.reflect.Array;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @Controller
 @RequestMapping(value = "/admin")
 public class AdminController {
+    @Autowired
+    Environment environment;
 
     @Autowired
     PlaceService placeService;
@@ -28,16 +40,45 @@ public class AdminController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/createPlace")
     public String getFormCreate(Model model){
-        Place place= new Place();
-        model.addAttribute("place", place);
+        model.addAttribute("place", new Place());
         return "test/addPlace";
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/createPlace")
-    public String postFormCreate(Model model, Place place) throws RemoteException {
-        placeService.createPlace(place, new Image());
-        return "test/addPlace";
+    @ResponseBody
+    public String postFormCreate(@RequestParam("name") String name,
+                                 @RequestParam("description") String description,
+                                 @RequestParam("images") MultipartFile[] images) throws RemoteException {
+        List<String> urlImage = new ArrayList<>();
+        for (MultipartFile file : images) {
+            urlImage.add(uploadImage(file));
+        }
+        return urlImage.toString();
     }
+
+
+    public String uploadImage(MultipartFile file){
+        Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
+                "cloud_name", environment.getProperty("cloudinary.cloud_name"),
+                "api_key", environment.getProperty("cloudinary.api_key"),
+                "api_secret", environment.getProperty("cloudinary.api_secret")));
+        try {
+            File uploadedFile = convertMultiPartToFile(file);
+            Map uploadResult = cloudinary.uploader().upload(uploadedFile, ObjectUtils.emptyMap());
+            return uploadResult.get("url").toString();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private File convertMultiPartToFile(MultipartFile file) throws IOException {
+        File convFile = new File(Objects.requireNonNull(file.getOriginalFilename()));
+        FileOutputStream fos = new FileOutputStream(convFile);
+        fos.write(file.getBytes());
+        fos.close();
+        return convFile;
+    }
+
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String user() {return "admin_user";}
 
