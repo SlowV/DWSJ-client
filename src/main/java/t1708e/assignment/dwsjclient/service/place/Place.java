@@ -31,8 +31,6 @@ public class Place  implements java.io.Serializable {
     public Place() {
     }
 
-
-
     public Place(
            t1708e.assignment.dwsjclient.service.place.Comment[] comments,
            long createdAt,

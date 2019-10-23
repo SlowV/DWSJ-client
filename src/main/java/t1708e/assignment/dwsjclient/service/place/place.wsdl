@@ -4,11 +4,11 @@
 <xsd:import namespace="http://service.dwsj.assignment.t1708e/" schemaLocation="http://localhost:9000/place?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="deletePlace">
-<part name="parameters" element="tns:deletePlace"/>
+<message name="createPlace">
+<part name="parameters" element="tns:createPlace"/>
 </message>
-<message name="deletePlaceResponse">
-<part name="parameters" element="tns:deletePlaceResponse"/>
+<message name="createPlaceResponse">
+<part name="parameters" element="tns:createPlaceResponse"/>
 </message>
 <message name="updatePlace">
 <part name="parameters" element="tns:updatePlace"/>
@@ -16,39 +16,39 @@
 <message name="updatePlaceResponse">
 <part name="parameters" element="tns:updatePlaceResponse"/>
 </message>
-<message name="createPlace">
-<part name="parameters" element="tns:createPlace"/>
-</message>
-<message name="createPlaceResponse">
-<part name="parameters" element="tns:createPlaceResponse"/>
-</message>
 <message name="getListPlace">
 <part name="parameters" element="tns:getListPlace"/>
 </message>
 <message name="getListPlaceResponse">
 <part name="parameters" element="tns:getListPlaceResponse"/>
 </message>
+<message name="deletePlace">
+<part name="parameters" element="tns:deletePlace"/>
+</message>
+<message name="deletePlaceResponse">
+<part name="parameters" element="tns:deletePlaceResponse"/>
+</message>
 <portType name="PlaceService">
-<operation name="deletePlace">
-<input wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/deletePlaceRequest" message="tns:deletePlace"/>
-<output wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/deletePlaceResponse" message="tns:deletePlaceResponse"/>
+<operation name="createPlace">
+<input wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/createPlaceRequest" message="tns:createPlace"/>
+<output wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/createPlaceResponse" message="tns:createPlaceResponse"/>
 </operation>
 <operation name="updatePlace">
 <input wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/updatePlaceRequest" message="tns:updatePlace"/>
 <output wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/updatePlaceResponse" message="tns:updatePlaceResponse"/>
 </operation>
-<operation name="createPlace">
-<input wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/createPlaceRequest" message="tns:createPlace"/>
-<output wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/createPlaceResponse" message="tns:createPlaceResponse"/>
-</operation>
 <operation name="getListPlace">
 <input wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/getListPlaceRequest" message="tns:getListPlace"/>
 <output wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/getListPlaceResponse" message="tns:getListPlaceResponse"/>
 </operation>
+<operation name="deletePlace">
+<input wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/deletePlaceRequest" message="tns:deletePlace"/>
+<output wsam:Action="http://service.dwsj.assignment.t1708e/PlaceService/deletePlaceResponse" message="tns:deletePlaceResponse"/>
+</operation>
 </portType>
 <binding name="PlaceServicePortBinding" type="tns:PlaceService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="deletePlace">
+<operation name="createPlace">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -66,7 +66,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="createPlace">
+<operation name="getListPlace">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -75,7 +75,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getListPlace">
+<operation name="deletePlace">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import t1708e.assignment.dwsjclient.dto.PlaceDTO;
+import t1708e.assignment.dwsjclient.service.image.ImageService;
 import t1708e.assignment.dwsjclient.service.place.Image;
 import t1708e.assignment.dwsjclient.service.place.Place;
 import t1708e.assignment.dwsjclient.service.place.PlaceService;
@@ -19,10 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 @Controller
 @RequestMapping(value = "/admin")
@@ -49,11 +47,18 @@ public class AdminController {
     public String postFormCreate(@RequestParam("name") String name,
                                  @RequestParam("description") String description,
                                  @RequestParam("images") MultipartFile[] images) throws RemoteException {
-        List<String> urlImage = new ArrayList<>();
+        List<Image> imageList = new ArrayList<>();
         for (MultipartFile file : images) {
-            urlImage.add(uploadImage(file));
+            Image image = new Image();
+            image.setName(file.getOriginalFilename());
+            image.setSource(uploadImage(file));
+            imageList.add(image);
         }
-        return urlImage.toString();
+        Place place = new Place();
+        place.setName(name);
+        place.setDescription(description);
+        placeService.createPlace(place, imageList);
+        return imageList.toString();
     }
 
 

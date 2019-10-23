@@ -2,25 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Trang chu</title>
-    <th:block th:replace="fragment/head :: head"></th:block>
+    <th:block th:replace="fragment/user :: head"></th:block>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Adventure</a>
+        <a class="navbar-brand" th:href="@{/}">Travel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
+        <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="places.html" class="nav-link">Places</a></li>
-                <li class="nav-item"><a href="hotel.html" class="nav-link">Hotels</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item active">
+                    <a th:href="@{/}" class="nav-link">Trang chủ</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Tìm kiếm</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Đăng ký</a></li>
             </ul>
         </div>
     </div>
@@ -1025,6 +1025,6 @@
         </div>
     </div>
 </section>
-<th:block th:replace="fragment/footer :: footer"> </th:block>
+<th:block th:replace="fragment/user :: footer"> </th:block>
 </body>
 </html>
