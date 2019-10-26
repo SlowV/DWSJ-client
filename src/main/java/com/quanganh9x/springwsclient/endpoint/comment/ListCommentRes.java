@@ -1,69 +1,137 @@
+/**
+ * ListCommentRes.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
 
 package com.quanganh9x.springwsclient.endpoint.comment;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+public class ListCommentRes  implements java.io.Serializable {
+    private com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] comments;
 
+    public ListCommentRes() {
+    }
 
-/**
- * <p>Java class for anonymous complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="comments" type="{http://quanganh9x.com/soap}xmlcomment" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "comments"
-})
-@XmlRootElement(name = "listCommentRes")
-public class ListCommentRes {
+    public ListCommentRes(
+           com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] comments) {
+           this.comments = comments;
+    }
 
-    protected List<Xmlcomment> comments;
 
     /**
-     * Gets the value of the comments property.
+     * Gets the comments value for this ListCommentRes.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the comments property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getComments().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Xmlcomment }
-     * 
-     * 
+     * @return comments
      */
-    public List<Xmlcomment> getComments() {
-        if (comments == null) {
-            comments = new ArrayList<Xmlcomment>();
+    public com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] getComments() {
+        return comments;
+    }
+
+
+    /**
+     * Sets the comments value for this ListCommentRes.
+     * 
+     * @param comments
+     */
+    public void setComments(com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] comments) {
+        this.comments = comments;
+    }
+
+    public com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment getComments(int i) {
+        return this.comments[i];
+    }
+
+    public void setComments(int i, com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment _value) {
+        this.comments[i] = _value;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof ListCommentRes)) return false;
+        ListCommentRes other = (ListCommentRes) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
         }
-        return this.comments;
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.comments==null && other.getComments()==null) || 
+             (this.comments!=null &&
+              java.util.Arrays.equals(this.comments, other.getComments())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getComments() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getComments());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getComments(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(ListCommentRes.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://quanganh9x.com/soap", ">listCommentRes"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("comments");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "comments"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "xmlcomment"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
     }
 
 }

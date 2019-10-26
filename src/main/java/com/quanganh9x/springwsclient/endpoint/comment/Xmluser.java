@@ -1,263 +1,403 @@
+/**
+ * Xmluser.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
 
 package com.quanganh9x.springwsclient.endpoint.comment;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+public class Xmluser  implements java.io.Serializable {
+    private int id;
 
+    private java.lang.String username;
 
-/**
- * <p>Java class for xmluser complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="xmluser">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="comments" type="{http://quanganh9x.com/soap}xmlcomment" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="ratings" type="{http://quanganh9x.com/soap}xmlrating" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="createdAt" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="updatedAt" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "xmluser", propOrder = {
-    "id",
-    "username",
-    "password",
-    "role",
-    "comments",
-    "ratings",
-    "createdAt",
-    "updatedAt"
-})
-public class Xmluser {
+    private java.lang.String password;
 
-    protected int id;
-    @XmlElement(required = true)
-    protected String username;
-    @XmlElement(required = true)
-    protected String password;
-    @XmlElement(required = true)
-    protected String role;
-    protected List<Xmlcomment> comments;
-    protected List<Xmlrating> ratings;
-    @XmlElement(required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar createdAt;
-    @XmlElement(required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar updatedAt;
+    private java.lang.String role;
+
+    private com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] comments;
+
+    private com.quanganh9x.springwsclient.endpoint.comment.Xmlrating[] ratings;
+
+    private java.util.Date createdAt;
+
+    private java.util.Date updatedAt;
+
+    public Xmluser() {
+    }
+
+    public Xmluser(
+           int id,
+           java.lang.String username,
+           java.lang.String password,
+           java.lang.String role,
+           com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] comments,
+           com.quanganh9x.springwsclient.endpoint.comment.Xmlrating[] ratings,
+           java.util.Date createdAt,
+           java.util.Date updatedAt) {
+           this.id = id;
+           this.username = username;
+           this.password = password;
+           this.role = role;
+           this.comments = comments;
+           this.ratings = ratings;
+           this.createdAt = createdAt;
+           this.updatedAt = updatedAt;
+    }
+
 
     /**
-     * Gets the value of the id property.
+     * Gets the id value for this Xmluser.
      * 
+     * @return id
      */
     public int getId() {
         return id;
     }
 
-    /**
-     * Sets the value of the id property.
-     * 
-     */
-    public void setId(int value) {
-        this.id = value;
-    }
 
     /**
-     * Gets the value of the username property.
+     * Sets the id value for this Xmluser.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @param id
      */
-    public String getUsername() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    /**
+     * Gets the username value for this Xmluser.
+     * 
+     * @return username
+     */
+    public java.lang.String getUsername() {
         return username;
     }
 
-    /**
-     * Sets the value of the username property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUsername(String value) {
-        this.username = value;
-    }
 
     /**
-     * Gets the value of the password property.
+     * Sets the username value for this Xmluser.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @param username
      */
-    public String getPassword() {
+    public void setUsername(java.lang.String username) {
+        this.username = username;
+    }
+
+
+    /**
+     * Gets the password value for this Xmluser.
+     * 
+     * @return password
+     */
+    public java.lang.String getPassword() {
         return password;
     }
 
-    /**
-     * Sets the value of the password property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPassword(String value) {
-        this.password = value;
-    }
 
     /**
-     * Gets the value of the role property.
+     * Sets the password value for this Xmluser.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @param password
      */
-    public String getRole() {
+    public void setPassword(java.lang.String password) {
+        this.password = password;
+    }
+
+
+    /**
+     * Gets the role value for this Xmluser.
+     * 
+     * @return role
+     */
+    public java.lang.String getRole() {
         return role;
     }
 
-    /**
-     * Sets the value of the role property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRole(String value) {
-        this.role = value;
-    }
 
     /**
-     * Gets the value of the comments property.
+     * Sets the role value for this Xmluser.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the comments property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getComments().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Xmlcomment }
-     * 
-     * 
+     * @param role
      */
-    public List<Xmlcomment> getComments() {
-        if (comments == null) {
-            comments = new ArrayList<Xmlcomment>();
-        }
-        return this.comments;
+    public void setRole(java.lang.String role) {
+        this.role = role;
     }
 
-    /**
-     * Gets the value of the ratings property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the ratings property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getRatings().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Xmlrating }
-     * 
-     * 
-     */
-    public List<Xmlrating> getRatings() {
-        if (ratings == null) {
-            ratings = new ArrayList<Xmlrating>();
-        }
-        return this.ratings;
-    }
 
     /**
-     * Gets the value of the createdAt property.
+     * Gets the comments value for this Xmluser.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return comments
      */
-    public XMLGregorianCalendar getCreatedAt() {
+    public com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] getComments() {
+        return comments;
+    }
+
+
+    /**
+     * Sets the comments value for this Xmluser.
+     * 
+     * @param comments
+     */
+    public void setComments(com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment[] comments) {
+        this.comments = comments;
+    }
+
+    public com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment getComments(int i) {
+        return this.comments[i];
+    }
+
+    public void setComments(int i, com.quanganh9x.springwsclient.endpoint.comment.Xmlcomment _value) {
+        this.comments[i] = _value;
+    }
+
+
+    /**
+     * Gets the ratings value for this Xmluser.
+     * 
+     * @return ratings
+     */
+    public com.quanganh9x.springwsclient.endpoint.comment.Xmlrating[] getRatings() {
+        return ratings;
+    }
+
+
+    /**
+     * Sets the ratings value for this Xmluser.
+     * 
+     * @param ratings
+     */
+    public void setRatings(com.quanganh9x.springwsclient.endpoint.comment.Xmlrating[] ratings) {
+        this.ratings = ratings;
+    }
+
+    public com.quanganh9x.springwsclient.endpoint.comment.Xmlrating getRatings(int i) {
+        return this.ratings[i];
+    }
+
+    public void setRatings(int i, com.quanganh9x.springwsclient.endpoint.comment.Xmlrating _value) {
+        this.ratings[i] = _value;
+    }
+
+
+    /**
+     * Gets the createdAt value for this Xmluser.
+     * 
+     * @return createdAt
+     */
+    public java.util.Date getCreatedAt() {
         return createdAt;
     }
 
-    /**
-     * Sets the value of the createdAt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCreatedAt(XMLGregorianCalendar value) {
-        this.createdAt = value;
-    }
 
     /**
-     * Gets the value of the updatedAt property.
+     * Sets the createdAt value for this Xmluser.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @param createdAt
      */
-    public XMLGregorianCalendar getUpdatedAt() {
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+
+    /**
+     * Gets the updatedAt value for this Xmluser.
+     * 
+     * @return updatedAt
+     */
+    public java.util.Date getUpdatedAt() {
         return updatedAt;
     }
 
+
     /**
-     * Sets the value of the updatedAt property.
+     * Sets the updatedAt value for this Xmluser.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @param updatedAt
      */
-    public void setUpdatedAt(XMLGregorianCalendar value) {
-        this.updatedAt = value;
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof Xmluser)) return false;
+        Xmluser other = (Xmluser) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            this.id == other.getId() &&
+            ((this.username==null && other.getUsername()==null) || 
+             (this.username!=null &&
+              this.username.equals(other.getUsername()))) &&
+            ((this.password==null && other.getPassword()==null) || 
+             (this.password!=null &&
+              this.password.equals(other.getPassword()))) &&
+            ((this.role==null && other.getRole()==null) || 
+             (this.role!=null &&
+              this.role.equals(other.getRole()))) &&
+            ((this.comments==null && other.getComments()==null) || 
+             (this.comments!=null &&
+              java.util.Arrays.equals(this.comments, other.getComments()))) &&
+            ((this.ratings==null && other.getRatings()==null) || 
+             (this.ratings!=null &&
+              java.util.Arrays.equals(this.ratings, other.getRatings()))) &&
+            ((this.createdAt==null && other.getCreatedAt()==null) || 
+             (this.createdAt!=null &&
+              this.createdAt.equals(other.getCreatedAt()))) &&
+            ((this.updatedAt==null && other.getUpdatedAt()==null) || 
+             (this.updatedAt!=null &&
+              this.updatedAt.equals(other.getUpdatedAt())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        _hashCode += getId();
+        if (getUsername() != null) {
+            _hashCode += getUsername().hashCode();
+        }
+        if (getPassword() != null) {
+            _hashCode += getPassword().hashCode();
+        }
+        if (getRole() != null) {
+            _hashCode += getRole().hashCode();
+        }
+        if (getComments() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getComments());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getComments(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        if (getRatings() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getRatings());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getRatings(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        if (getCreatedAt() != null) {
+            _hashCode += getCreatedAt().hashCode();
+        }
+        if (getUpdatedAt() != null) {
+            _hashCode += getUpdatedAt().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(Xmluser.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "xmluser"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("id");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "id"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("username");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "username"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("password");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "password"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("role");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "role"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("comments");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "comments"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "xmlcomment"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("ratings");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "ratings"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "xmlrating"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("createdAt");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "createdAt"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("updatedAt");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://quanganh9x.com/soap", "updatedAt"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
     }
 
 }
