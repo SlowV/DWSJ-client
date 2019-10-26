@@ -10,17 +10,11 @@
 <message name="registerResponse">
 <part name="parameters" element="tns:registerResponse"/>
 </message>
-<message name="login">
-<part name="parameters" element="tns:login"/>
+<message name="findByUsername">
+<part name="parameters" element="tns:findByUsername"/>
 </message>
-<message name="loginResponse">
-<part name="parameters" element="tns:loginResponse"/>
-</message>
-<message name="updateUser">
-<part name="parameters" element="tns:updateUser"/>
-</message>
-<message name="updateUserResponse">
-<part name="parameters" element="tns:updateUserResponse"/>
+<message name="findByUsernameResponse">
+<part name="parameters" element="tns:findByUsernameResponse"/>
 </message>
 <message name="deleteUser">
 <part name="parameters" element="tns:deleteUser"/>
@@ -28,42 +22,38 @@
 <message name="deleteUserResponse">
 <part name="parameters" element="tns:deleteUserResponse"/>
 </message>
-<message name="findByUsername">
-<part name="parameters" element="tns:findByUsername"/>
-</message>
-<message name="findByUsernameResponse">
-<part name="parameters" element="tns:findByUsernameResponse"/>
-</message>
 <message name="getListUser">
 <part name="parameters" element="tns:getListUser"/>
 </message>
 <message name="getListUserResponse">
 <part name="parameters" element="tns:getListUserResponse"/>
 </message>
+<message name="updateUser">
+<part name="parameters" element="tns:updateUser"/>
+</message>
+<message name="updateUserResponse">
+<part name="parameters" element="tns:updateUserResponse"/>
+</message>
 <portType name="UserService">
 <operation name="register">
 <input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/registerRequest" message="tns:register"/>
 <output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/registerResponse" message="tns:registerResponse"/>
 </operation>
-<operation name="login">
-<input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/loginRequest" message="tns:login"/>
-<output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/loginResponse" message="tns:loginResponse"/>
-</operation>
-<operation name="updateUser">
-<input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/updateUserRequest" message="tns:updateUser"/>
-<output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/updateUserResponse" message="tns:updateUserResponse"/>
+<operation name="findByUsername">
+<input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/findByUsernameRequest" message="tns:findByUsername"/>
+<output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/findByUsernameResponse" message="tns:findByUsernameResponse"/>
 </operation>
 <operation name="deleteUser">
 <input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/deleteUserRequest" message="tns:deleteUser"/>
 <output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/deleteUserResponse" message="tns:deleteUserResponse"/>
 </operation>
-<operation name="findByUsername">
-<input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/findByUsernameRequest" message="tns:findByUsername"/>
-<output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/findByUsernameResponse" message="tns:findByUsernameResponse"/>
-</operation>
 <operation name="getListUser">
 <input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/getListUserRequest" message="tns:getListUser"/>
 <output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/getListUserResponse" message="tns:getListUserResponse"/>
+</operation>
+<operation name="updateUser">
+<input wsam:Action="http://service.dwsj.assignment.t1708e/UserService/updateUserRequest" message="tns:updateUser"/>
+<output wsam:Action="http://service.dwsj.assignment.t1708e/UserService/updateUserResponse" message="tns:updateUserResponse"/>
 </operation>
 </portType>
 <binding name="UserServicePortBinding" type="tns:UserService">
@@ -77,16 +67,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="login">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="updateUser">
+<operation name="findByUsername">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -104,7 +85,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="findByUsername">
+<operation name="getListUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -113,7 +94,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getListUser">
+<operation name="updateUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

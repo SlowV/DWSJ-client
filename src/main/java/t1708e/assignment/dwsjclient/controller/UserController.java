@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import t1708e.assignment.dwsjclient.service.user.User;
+import t1708e.assignment.dwsjclient.entity.User;
 import t1708e.assignment.dwsjclient.service.user.UserService;
 import t1708e.assignment.dwsjclient.util.StringConst;
 

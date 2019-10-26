@@ -1,13 +1,12 @@
-/**
- * ImageServicePortBindingStub.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package t1708e.assignment.dwsjclient.service.image;
 
-public class ImageServicePortBindingStub extends org.apache.axis.client.Stub implements t1708e.assignment.dwsjclient.service.image.ImageService {
+import t1708e.assignment.dwsjclient.entity.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ImageServicePortBindingStub extends org.apache.axis.client.Stub implements ImageService {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -16,7 +15,7 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[4];
+        _operations = new org.apache.axis.description.OperationDesc[5];
         _initOperationDesc1();
     }
 
@@ -25,15 +24,36 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("createImage");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.travel.t1708e/", "image"), t1708e.assignment.dwsjclient.service.image.Image.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"), Image.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "image"));
-        oper.setReturnClass(t1708e.assignment.dwsjclient.service.image.Image.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"));
+        oper.setReturnClass(Image.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[0] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("updateImage");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"), Image.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"));
+        oper.setReturnClass(Image.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[1] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("getListImage");
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"));
+        oper.setReturnClass(Image[].class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[2] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("deleteImage");
@@ -42,28 +62,19 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[1] = oper;
+        _operations[3] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("updateImage");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.travel.t1708e/", "image"), t1708e.assignment.dwsjclient.service.image.Image.class, false, false);
+        oper.setName("getImagesByPlace");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "place"), Place.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "image"));
-        oper.setReturnClass(t1708e.assignment.dwsjclient.service.image.Image.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image"));
+        oper.setReturnClass(List.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[2] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("getListImage");
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "image"));
-        oper.setReturnClass(t1708e.assignment.dwsjclient.service.image.Image[].class);
-        oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
-        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[3] = oper;
+        _operations[4] = oper;
 
     }
 
@@ -96,37 +107,37 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "comment");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "comment");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.image.Comment.class;
+            cls = Comment.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "image");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.image.Image.class;
+            cls = Image.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "place");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "place");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.image.Place.class;
+            cls = Place.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "rating");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.image.Rating.class;
+            cls = Rating.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "user");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.image.User.class;
+            cls = User.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -197,7 +208,7 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
         }
     }
 
-    public t1708e.assignment.dwsjclient.service.image.Image createImage(t1708e.assignment.dwsjclient.service.image.Image arg0) throws java.rmi.RemoteException {
+    public Image createImage(Image arg0) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -209,7 +220,7 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "createImage"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "createImage"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -221,9 +232,77 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
         else {
             extractAttachments(_call);
             try {
-                return (t1708e.assignment.dwsjclient.service.image.Image) _resp;
+                return (Image) _resp;
             } catch (java.lang.Exception _exception) {
-                return (t1708e.assignment.dwsjclient.service.image.Image) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.image.Image.class);
+                return (Image) org.apache.axis.utils.JavaUtils.convert(_resp, Image.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Image updateImage(Image arg0) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[1]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "updateImage"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Image) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Image) org.apache.axis.utils.JavaUtils.convert(_resp, Image.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public List<Image> getListImage() throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[2]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "getListImage"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (List<Image>) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (List<Image>) org.apache.axis.utils.JavaUtils.convert(_resp, ArrayList.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -236,14 +315,14 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[1]);
+        _call.setOperation(_operations[3]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "deleteImage"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "deleteImage"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -265,23 +344,23 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
 }
     }
 
-    public t1708e.assignment.dwsjclient.service.image.Image updateImage(t1708e.assignment.dwsjclient.service.image.Image arg0) throws java.rmi.RemoteException {
+    public List<Image> getImagesByPlace(Place place) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[2]);
+        _call.setOperation(_operations[4]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "updateImage"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "getImagesByPlace"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {place});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -289,43 +368,9 @@ public class ImageServicePortBindingStub extends org.apache.axis.client.Stub imp
         else {
             extractAttachments(_call);
             try {
-                return (t1708e.assignment.dwsjclient.service.image.Image) _resp;
+                return (List<Image>) _resp;
             } catch (java.lang.Exception _exception) {
-                return (t1708e.assignment.dwsjclient.service.image.Image) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.image.Image.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public t1708e.assignment.dwsjclient.service.image.Image[] getListImage() throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[3]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "getListImage"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (t1708e.assignment.dwsjclient.service.image.Image[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (t1708e.assignment.dwsjclient.service.image.Image[]) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.image.Image[].class);
+                return (List<Image>) org.apache.axis.utils.JavaUtils.convert(_resp, ArrayList.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

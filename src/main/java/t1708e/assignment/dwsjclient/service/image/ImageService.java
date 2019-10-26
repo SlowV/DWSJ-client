@@ -7,9 +7,16 @@
 
 package t1708e.assignment.dwsjclient.service.image;
 
+import t1708e.assignment.dwsjclient.entity.*;
+
+import javax.jws.WebService;
+import java.util.List;
+
+@WebService
 public interface ImageService extends java.rmi.Remote {
-    public t1708e.assignment.dwsjclient.service.image.Image createImage(t1708e.assignment.dwsjclient.service.image.Image arg0) throws java.rmi.RemoteException;
+    public Image createImage(Image image) throws java.rmi.RemoteException;
+    public Image updateImage(Image image) throws java.rmi.RemoteException;
+    public List<Image> getListImage() throws java.rmi.RemoteException;
     public boolean deleteImage() throws java.rmi.RemoteException;
-    public t1708e.assignment.dwsjclient.service.image.Image updateImage(t1708e.assignment.dwsjclient.service.image.Image arg0) throws java.rmi.RemoteException;
-    public t1708e.assignment.dwsjclient.service.image.Image[] getListImage() throws java.rmi.RemoteException;
+    public List<Image> getImagesByPlace(Place place) throws java.rmi.RemoteException;
 }

@@ -6,8 +6,6 @@ import t1708e.assignment.dwsjclient.service.comment.CommentService;
 import t1708e.assignment.dwsjclient.service.comment.CommentServiceServiceLocator;
 import t1708e.assignment.dwsjclient.service.image.ImageService;
 import t1708e.assignment.dwsjclient.service.image.ImageServiceServiceLocator;
-import t1708e.assignment.dwsjclient.service.place.PlaceService;
-import t1708e.assignment.dwsjclient.service.place.PlaceServiceServiceLocator;
 import t1708e.assignment.dwsjclient.service.rating.RatingService;
 import t1708e.assignment.dwsjclient.service.rating.RatingServiceServiceLocator;
 import t1708e.assignment.dwsjclient.service.user.UserService;
@@ -41,10 +39,10 @@ public class AppConfig {
         return ratingtServiceServiceLocator.getRatingServicePort();
     }
 
-    @Bean
-    public PlaceService placeService() throws ServiceException {
-        PlaceServiceServiceLocator placetServiceServiceLocator = new PlaceServiceServiceLocator();
-        return placetServiceServiceLocator.getPlaceServicePort();
-    }
+//    @Bean
+//    public PlaceService placeService() throws ServiceException {
+//        PlaceServiceServiceLocator placeServiceServiceLocator = new PlaceServiceServiceLocator();
+//        return placeServiceServiceLocator.getPlaceServicePort();
+//    }
 
 }

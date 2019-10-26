@@ -24019,3 +24019,7 @@ a.fc-more:hover {
     margin-bottom: 30px;
     background-size: 100%
 }
+
+html, body {
+    overflow-x: hidden;
+}

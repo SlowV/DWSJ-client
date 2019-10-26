@@ -2,23 +2,18 @@ package t1708e.assignment.dwsjclient.controller;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
-import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import t1708e.assignment.dwsjclient.dto.PlaceDTO;
-import t1708e.assignment.dwsjclient.service.image.ImageService;
-import t1708e.assignment.dwsjclient.service.place.Image;
-import t1708e.assignment.dwsjclient.service.place.Place;
-import t1708e.assignment.dwsjclient.service.place.PlaceService;
+import t1708e.assignment.dwsjclient.entity.Image;
+import t1708e.assignment.dwsjclient.entity.Place;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.rmi.RemoteException;
 import java.util.*;
 
@@ -28,8 +23,8 @@ public class AdminController {
     @Autowired
     Environment environment;
 
-    @Autowired
-    PlaceService placeService;
+//    @Autowired
+//    PlaceService placeService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String index() {
@@ -57,7 +52,7 @@ public class AdminController {
         Place place = new Place();
         place.setName(name);
         place.setDescription(description);
-        placeService.createPlace(place, imageList);
+//        placeService.createPlace(place, (Image[]) imageList.toArray());
         return imageList.toString();
     }
 

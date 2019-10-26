@@ -11,9 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import t1708e.assignment.dwsjclient.service.user.User;
+import t1708e.assignment.dwsjclient.entity.User;
 import t1708e.assignment.dwsjclient.service.user.UserService;
-import t1708e.assignment.dwsjclient.util.StringConst;
 
 import java.rmi.RemoteException;
 

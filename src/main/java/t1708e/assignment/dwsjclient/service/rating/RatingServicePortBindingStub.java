@@ -7,7 +7,9 @@
 
 package t1708e.assignment.dwsjclient.service.rating;
 
-public class RatingServicePortBindingStub extends org.apache.axis.client.Stub implements t1708e.assignment.dwsjclient.service.rating.RatingService {
+import t1708e.assignment.dwsjclient.entity.*;
+
+public class RatingServicePortBindingStub extends org.apache.axis.client.Stub implements RatingService {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -16,7 +18,7 @@ public class RatingServicePortBindingStub extends org.apache.axis.client.Stub im
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[1];
+        _operations = new org.apache.axis.description.OperationDesc[2];
         _initOperationDesc1();
     }
 
@@ -25,15 +27,39 @@ public class RatingServicePortBindingStub extends org.apache.axis.client.Stub im
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("createRating");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.travel.t1708e/", "rating"), t1708e.assignment.dwsjclient.service.rating.Rating.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating"), Rating.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://service.travel.t1708e/", "rating"));
-        oper.setReturnClass(t1708e.assignment.dwsjclient.service.rating.Rating.class);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "anyType"), java.lang.Object.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg2"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg3"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user"), User.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating"));
+        oper.setReturnClass(Rating.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[0] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("findByPlaceOrImage");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "anyType"), java.lang.Object.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        param.setOmittable(true);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating"));
+        oper.setReturnClass(Rating.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[1] = oper;
 
     }
 
@@ -66,37 +92,37 @@ public class RatingServicePortBindingStub extends org.apache.axis.client.Stub im
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "comment");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "comment");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.rating.Comment.class;
+            cls = Comment.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "image");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "image");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.rating.Image.class;
+            cls = Image.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "place");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "place");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.rating.Place.class;
+            cls = Place.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "rating");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "rating");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.rating.Rating.class;
+            cls = Rating.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://service.travel.t1708e/", "user");
+            qName = new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "user");
             cachedSerQNames.add(qName);
-            cls = t1708e.assignment.dwsjclient.service.rating.User.class;
+            cls = User.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -167,7 +193,7 @@ public class RatingServicePortBindingStub extends org.apache.axis.client.Stub im
         }
     }
 
-    public t1708e.assignment.dwsjclient.service.rating.Rating createRating(t1708e.assignment.dwsjclient.service.rating.Rating arg0) throws java.rmi.RemoteException {
+    public Rating createRating(Rating arg0, java.lang.Object arg1, java.lang.String arg2, User arg3) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -179,11 +205,11 @@ public class RatingServicePortBindingStub extends org.apache.axis.client.Stub im
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.travel.t1708e/", "createRating"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "createRating"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0, arg1, arg2, arg3});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -191,9 +217,43 @@ public class RatingServicePortBindingStub extends org.apache.axis.client.Stub im
         else {
             extractAttachments(_call);
             try {
-                return (t1708e.assignment.dwsjclient.service.rating.Rating) _resp;
+                return (Rating) _resp;
             } catch (java.lang.Exception _exception) {
-                return (t1708e.assignment.dwsjclient.service.rating.Rating) org.apache.axis.utils.JavaUtils.convert(_resp, t1708e.assignment.dwsjclient.service.rating.Rating.class);
+                return (Rating) org.apache.axis.utils.JavaUtils.convert(_resp, Rating.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Rating findByPlaceOrImage(Object arg0, String arg1) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[1]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.dwsj.assignment.t1708e/", "findByPlaceOrImage"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0, arg1});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Rating) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Rating) org.apache.axis.utils.JavaUtils.convert(_resp, Rating.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

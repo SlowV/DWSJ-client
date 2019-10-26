@@ -7,6 +7,12 @@
 
 package t1708e.assignment.dwsjclient.service.comment;
 
+import t1708e.assignment.dwsjclient.entity.Comment;
+import t1708e.assignment.dwsjclient.entity.User;
+
+import java.util.List;
+
 public interface CommentService extends java.rmi.Remote {
-    public t1708e.assignment.dwsjclient.service.comment.Comment createComment(t1708e.assignment.dwsjclient.service.comment.Comment arg0) throws java.rmi.RemoteException;
+    public Comment createComment(Comment comment, Object obj, String type, User user) throws java.rmi.RemoteException;
+    public List<Comment> getCommentByPlaceOrImage(String type, Object obj) throws java.rmi.RemoteException;
 }

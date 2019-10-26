@@ -7,11 +7,15 @@
 
 package t1708e.assignment.dwsjclient.service.user;
 
+import t1708e.assignment.dwsjclient.entity.User;
+
+import javax.jws.WebService;
+
+@WebService
 public interface UserService extends java.rmi.Remote {
-    public t1708e.assignment.dwsjclient.service.user.User register(t1708e.assignment.dwsjclient.service.user.User arg0) throws java.rmi.RemoteException;
-    public t1708e.assignment.dwsjclient.service.user.User login(t1708e.assignment.dwsjclient.service.user.User arg0) throws java.rmi.RemoteException;
-    public t1708e.assignment.dwsjclient.service.user.User updateUser(t1708e.assignment.dwsjclient.service.user.User arg0) throws java.rmi.RemoteException;
+    public User register(User arg0) throws java.rmi.RemoteException;
+    public User findByUsername(java.lang.String arg0) throws java.rmi.RemoteException;
     public boolean deleteUser() throws java.rmi.RemoteException;
-    public t1708e.assignment.dwsjclient.service.user.User findByUsername(java.lang.String arg0) throws java.rmi.RemoteException;
-    public t1708e.assignment.dwsjclient.service.user.User[] getListUser() throws java.rmi.RemoteException;
+    public User[] getListUser() throws java.rmi.RemoteException;
+    public User updateUser(User arg0) throws java.rmi.RemoteException;
 }
